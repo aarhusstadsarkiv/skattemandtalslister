@@ -1,0 +1,319 @@
+{
+  "filters": [
+    {
+      "invert_link": "q=skattemandtals%2A&sort=date_from&direction=asc&date_from=18940101&date_to=18941231&fmt=json&-content_types=21",
+      "key": "content_types",
+      "label": "Registre og protokoller/Skattemandtalslister",
+      "negated": false,
+      "remove_link": "q=skattemandtals%2A&sort=date_from&direction=asc&date_from=18940101&date_to=18941231&fmt=json",
+      "value": "21",
+      "view_link": "content_types/21"
+    },
+    {
+      "invert_link": "q=skattemandtals%2A&sort=date_from&direction=asc&content_types=21&date_to=18941231&fmt=json&-date_from=18940101",
+      "key": "date_from",
+      "negated": null,
+      "remove_link": "q=skattemandtals%2A&sort=date_from&direction=asc&content_types=21&date_to=18941231&fmt=json",
+      "value": "18940101"
+    },
+    {
+      "invert_link": "q=skattemandtals%2A&sort=date_from&direction=asc&content_types=21&date_from=18940101&fmt=json&-date_to=18941231",
+      "key": "date_to",
+      "negated": null,
+      "remove_link": "q=skattemandtals%2A&sort=date_from&direction=asc&content_types=21&date_from=18940101&fmt=json",
+      "value": "18941231"
+    }
+  ],
+  "next": null,
+  "previous": null,
+  "result": [
+    {
+      "availability": "4",
+      "collection_id": "194",
+      "collectors_label": "Aarhus K\u00f8bstadskommune (1838-1970)",
+      "content_types": [
+        "18",
+        "21"
+      ],
+      "created_at": "20180131121102",
+      "date_from": "18940101",
+      "date_to": "18941231",
+      "id": "000207421",
+      "label": "Skattemandtalslister Fiskergade, Fiskergyde, Frederiksgade, Immervad, S\u00f8ndergade",
+      "portrait": "https://storage.googleapis.com/openaws-access/000207421_m.jpg",
+      "series": [
+        "Aarhus Kommune",
+        "Aarhus Kommune/Magistratens 1. afdeling",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen/Aarhus Folkeregister (1885-1953)"
+      ],
+      "summary": null,
+      "thumbnail": "https://storage.googleapis.com/openaws-access/000207421_s.jpg",
+      "updated_at": "20181030124100"
+    },
+    {
+      "availability": "4",
+      "collection_id": "194",
+      "collectors_label": "Aarhus K\u00f8bstadskommune (1838-1970)",
+      "content_types": [
+        "18",
+        "21"
+      ],
+      "created_at": "20180131121102",
+      "date_from": "18940101",
+      "date_to": "18941231",
+      "id": "000207416",
+      "label": "Skattemandtalslister Havgyde, Knudrisgade, Kystvej, Mejlgade, Sandgravvej, Skovvej, Smedegyde, Tv\u00e6rgade, \u00d8stbanegaarden",
+      "portrait": "https://storage.googleapis.com/openaws-access/000207416_m.jpg",
+      "series": [
+        "Aarhus Kommune",
+        "Aarhus Kommune/Magistratens 1. afdeling",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen/Aarhus Folkeregister (1885-1953)"
+      ],
+      "summary": null,
+      "thumbnail": "https://storage.googleapis.com/openaws-access/000207416_s.jpg",
+      "updated_at": "20181030124100"
+    },
+    {
+      "availability": "4",
+      "collection_id": "194",
+      "collectors_label": "Aarhus K\u00f8bstadskommune (1838-1970)",
+      "content_types": [
+        "18",
+        "21"
+      ],
+      "created_at": "20180131121102",
+      "date_from": "18940101",
+      "date_to": "18941231",
+      "id": "000207418",
+      "label": "Skattemandtalslister Brendstrupvej, Gade over M\u00f8lletoften, Hjortensgade, Lollandsgade, Magdalene Asylet, Munkegade, M\u00f8llegade, Norsgade, Ny Gr\u00f8nnegade, Ny Munkegade, N\u00f8rre All\u00e9, N\u00f8rregade, Thun\u00f8gade, Vesterbro M\u00f8lle, Vesterbrogade",
+      "portrait": "https://storage.googleapis.com/openaws-access/000207418_m.jpg",
+      "series": [
+        "Aarhus Kommune",
+        "Aarhus Kommune/Magistratens 1. afdeling",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen/Aarhus Folkeregister (1885-1953)"
+      ],
+      "summary": null,
+      "thumbnail": "https://storage.googleapis.com/openaws-access/000207418_s.jpg",
+      "updated_at": "20181030124100"
+    },
+    {
+      "availability": "4",
+      "collection_id": "194",
+      "collectors_label": "Aarhus K\u00f8bstadskommune (1838-1970)",
+      "content_types": [
+        "18",
+        "21"
+      ],
+      "created_at": "20180131121102",
+      "date_from": "18940101",
+      "date_to": "18941231",
+      "id": "000207420",
+      "label": "Skattemandtalslister Aagade, Badevej, Barbergyde, Dynkarken, Gr\u00f8nland, Havnegade, Kannikegade, Mindegade, Revet, Ridderstr\u00e6de, Sct. Clemens Torv, Skolegade, Skolegyde, Spanien, Toldbodgade",
+      "portrait": "https://storage.googleapis.com/openaws-access/000207420_m.jpg",
+      "series": [
+        "Aarhus Kommune",
+        "Aarhus Kommune/Magistratens 1. afdeling",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen/Aarhus Folkeregister (1885-1953)"
+      ],
+      "summary": null,
+      "thumbnail": "https://storage.googleapis.com/openaws-access/000207420_s.jpg",
+      "updated_at": "20181030124100"
+    },
+    {
+      "availability": "4",
+      "collection_id": "194",
+      "collectors_label": "Aarhus K\u00f8bstadskommune (1838-1970)",
+      "content_types": [
+        "18",
+        "21"
+      ],
+      "created_at": "20180131121102",
+      "date_from": "18940101",
+      "date_to": "18941231",
+      "id": "000207423",
+      "label": "Skattemandtalslister Absalonsgade, Frederiks All\u00e9, Hallsvej, Holbergsgade, Kalkv\u00e6rksstr\u00e6de, L\u00e6ss\u00f8gade, S\u00f8gade, Valdemarsgade, Wilstersgade",
+      "portrait": "https://storage.googleapis.com/openaws-access/000207423_m.jpg",
+      "series": [
+        "Aarhus Kommune",
+        "Aarhus Kommune/Magistratens 1. afdeling",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen/Aarhus Folkeregister (1885-1953)"
+      ],
+      "summary": null,
+      "thumbnail": "https://storage.googleapis.com/openaws-access/000207423_s.jpg",
+      "updated_at": "20181030124100"
+    },
+    {
+      "availability": "4",
+      "collection_id": "194",
+      "collectors_label": "Aarhus K\u00f8bstadskommune (1838-1970)",
+      "content_types": [
+        "18",
+        "21"
+      ],
+      "created_at": "20180131121102",
+      "date_from": "18940101",
+      "date_to": "18941231",
+      "id": "000207425",
+      "label": "Skattemandtalslister Annagade, Brammersgade, B\u00fclowsgade, Clausensgade, Godthaabsgade, Montanavej, Ole R\u00f8mersgade, Sct. Paulsgade, St. Blichersgade",
+      "portrait": "https://storage.googleapis.com/openaws-access/000207425_m.jpg",
+      "series": [
+        "Aarhus Kommune",
+        "Aarhus Kommune/Magistratens 1. afdeling",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen/Aarhus Folkeregister (1885-1953)"
+      ],
+      "summary": null,
+      "thumbnail": "https://storage.googleapis.com/openaws-access/000207425_s.jpg",
+      "updated_at": "20181030124100"
+    },
+    {
+      "availability": "4",
+      "collection_id": "194",
+      "collectors_label": "Aarhus K\u00f8bstadskommune (1838-1970)",
+      "content_types": [
+        "18",
+        "21"
+      ],
+      "created_at": "20180131121102",
+      "date_from": "18940101",
+      "date_to": "18941231",
+      "id": "000207415",
+      "label": "Skattemandtalslister Badstuegade, Bispegade, Domkirkeplads, Frue Kirkerist, Graven, Guldsmedgade, Klostergade, Paradisgade, Raadhusstr\u00e6de, Rosensgade, Studsgade, Tangen, Volden",
+      "portrait": "https://storage.googleapis.com/openaws-access/000207415_m.jpg",
+      "series": [
+        "Aarhus Kommune",
+        "Aarhus Kommune/Magistratens 1. afdeling",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen/Aarhus Folkeregister (1885-1953)"
+      ],
+      "summary": null,
+      "thumbnail": "https://storage.googleapis.com/openaws-access/000207415_s.jpg",
+      "updated_at": "20181030124100"
+    },
+    {
+      "availability": "4",
+      "collection_id": "194",
+      "collectors_label": "Aarhus K\u00f8bstadskommune (1838-1970)",
+      "content_types": [
+        "18",
+        "21"
+      ],
+      "created_at": "20180131121102",
+      "date_from": "18940101",
+      "date_to": "18941231",
+      "id": "000207417",
+      "label": "Skattemandtalslister Amerikavej, Fynsgade, Guldbergsgade, Hjelmensgade, Kirkegaardsvej, Nyvej, N\u00f8rrebrogade, Sams\u00f8gade, Sj\u00e6llandsgade, S\u00f8lystgade",
+      "portrait": "https://storage.googleapis.com/openaws-access/000207417_m.jpg",
+      "series": [
+        "Aarhus Kommune",
+        "Aarhus Kommune/Magistratens 1. afdeling",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen/Aarhus Folkeregister (1885-1953)"
+      ],
+      "summary": null,
+      "thumbnail": "https://storage.googleapis.com/openaws-access/000207417_s.jpg",
+      "updated_at": "20181030124100"
+    },
+    {
+      "availability": "4",
+      "collection_id": "194",
+      "collectors_label": "Aarhus K\u00f8bstadskommune (1838-1970)",
+      "content_types": [
+        "18",
+        "21"
+      ],
+      "created_at": "20180131121102",
+      "date_from": "18940101",
+      "date_to": "18941231",
+      "id": "000207419",
+      "label": "Skattemandtalslister Aarhus Mark Nord, Andersensgade, Randers Landevej, Regineh\u00f8j Skovvej, Riis Skov, Socialgade",
+      "portrait": "https://storage.googleapis.com/openaws-access/000207419_m.jpg",
+      "series": [
+        "Aarhus Kommune",
+        "Aarhus Kommune/Magistratens 1. afdeling",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen/Aarhus Folkeregister (1885-1953)"
+      ],
+      "summary": null,
+      "thumbnail": "https://storage.googleapis.com/openaws-access/000207419_s.jpg",
+      "updated_at": "20181030124100"
+    },
+    {
+      "availability": "4",
+      "collection_id": "194",
+      "collectors_label": "Aarhus K\u00f8bstadskommune (1838-1970)",
+      "content_types": [
+        "18",
+        "21"
+      ],
+      "created_at": "20180131121102",
+      "date_from": "18940101",
+      "date_to": "18941231",
+      "id": "000207422",
+      "label": "Skattemandtalslister Amaliegade, Asylvej, Banegaardsvej, Borupsgade, Fattiggaarden, Fredens Torv, Fredensgade, Kriegersvej, Orla Lehmanns All\u00e9, Rosenkrantzgade, Ryesgade, Rytterikasernen, S\u00f8nder All\u00e9, Vester All\u00e9, \u00d8stergade",
+      "portrait": "https://storage.googleapis.com/openaws-access/000207422_m.jpg",
+      "series": [
+        "Aarhus Kommune",
+        "Aarhus Kommune/Magistratens 1. afdeling",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen/Aarhus Folkeregister (1885-1953)"
+      ],
+      "summary": null,
+      "thumbnail": "https://storage.googleapis.com/openaws-access/000207422_s.jpg",
+      "updated_at": "20181030124100"
+    },
+    {
+      "availability": "4",
+      "collection_id": "194",
+      "collectors_label": "Aarhus K\u00f8bstadskommune (1838-1970)",
+      "content_types": [
+        "18",
+        "21"
+      ],
+      "created_at": "20180131121102",
+      "date_from": "18940101",
+      "date_to": "18941231",
+      "id": "000207424",
+      "label": "Skattemandtalslister Bruunsgade, Dybb\u00f8lgade, Fredericiagade, Hads Herreds Vej, Heibergsgade, Helgolandsgade, Istedgade, J\u00e6gergaardsvej, Marselisborg All\u00e9",
+      "portrait": "https://storage.googleapis.com/openaws-access/000207424_m.jpg",
+      "series": [
+        "Aarhus Kommune",
+        "Aarhus Kommune/Magistratens 1. afdeling",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen/Aarhus Folkeregister (1885-1953)"
+      ],
+      "summary": null,
+      "thumbnail": "https://storage.googleapis.com/openaws-access/000207424_s.jpg",
+      "updated_at": "20181030124100"
+    },
+    {
+      "availability": "4",
+      "collection_id": "194",
+      "collectors_label": "Aarhus K\u00f8bstadskommune (1838-1970)",
+      "content_types": [
+        "18",
+        "21"
+      ],
+      "created_at": "20180131121102",
+      "date_from": "18940101",
+      "date_to": "18941231",
+      "id": "000207414",
+      "label": "Skattemandtalslister Garvergyde, Gr\u00f8nnegade, Lille Torv, Nygade, Store Torv, Vestergade, Vestre M\u00f8llesti, \u00d8stre M\u00f8llesti",
+      "portrait": "https://storage.googleapis.com/openaws-access/000207414_m.jpg",
+      "series": [
+        "Aarhus Kommune",
+        "Aarhus Kommune/Magistratens 1. afdeling",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen",
+        "Aarhus Kommune/Magistratens 1. afdeling/Aarhus Skattev\u00e6sen/Aarhus Folkeregister (1885-1953)"
+      ],
+      "summary": null,
+      "thumbnail": "https://storage.googleapis.com/openaws-access/000207414_s.jpg",
+      "updated_at": "20181030124100"
+    }
+  ]
+}

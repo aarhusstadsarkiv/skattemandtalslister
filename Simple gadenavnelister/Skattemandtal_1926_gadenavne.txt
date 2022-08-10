@@ -1,0 +1,266 @@
+Aagade
+Absalonsgade
+Aldersrovej
+Amaliegade
+Amtssygehuset
+Anholtsgade
+Annagade
+Artillerikasernen
+Assensgade
+Asylgade
+Badevej
+Badstuegade
+Banegaardsgade
+Bartsgade
+Bergensgade
+Bethesdavej
+Bissensgade
+Blegdammen
+Bogensegade
+Borgerskolen i Frederiks Allé
+Borgerskolen i Valdemarsgade
+Borupsgade
+Brammersgade
+Brendstrupvej
+Bruunsgade
+Bøgegade
+Bülowsgade
+Carl Blochsgade
+Carsten Hauchsvej
+Charlottehøj
+Chr. Kiersplads
+Chr. Richardtsvej
+Chr. Winthers Vej
+Christianiagade
+Christiansgade
+Clausensgade
+Cort Adelersgade
+Dalgas Avenue
+Dannebrogsgade
+Domkirkeplads
+Dronning Margrethes Vej
+Dybbølgade
+Dynkarken
+Eckersbergsgade
+Egegade
+Elmegade
+Eugen Warmingsvej
+Ewaldsgade
+Faaborggade
+Falstersgade
+Finsensgade
+Fiskergade
+Fiskergyde
+Fiskerhuset
+Fodfolkskasernen
+Fredens Torv
+Fredensgade
+Fredericiagade
+Frederiks Allé
+Frederiksbjerg Torv
+Frederiksgade
+Fritjof Nansensvej
+Frue Kirkeplads
+Frue Kirkerist
+Frydenlundsvej
+Fyensgade
+Garnisonssygehuset
+Gentoftevej
+Gerlachsgade
+Godsbanegade
+Godthaabsgade
+Graven
+Grønland
+Grønlandsgade
+Grønnegade
+Grønningen
+Guldsmedgade
+Gyldenløvesgade
+H.C. Lumbyesvej
+Hans Brogesgade
+Hans Egedesvej
+Harald Skovbysgade
+Haver v/Marselisborg
+Havevænget
+Havnegade
+Havnen (Nord)
+Havnen (Syd)
+Havnevej
+Hedemannsgade
+Heibergsgade
+Heisesvej
+Helgenæsgade
+Helgolandsgade
+Hendrik Pontoppidansgade
+Herambsgade
+Herluf Trollesgade
+Herningvej
+Hjarnøgade
+Hjelmensgade
+Hjortensgade
+Holbergsgade
+Holger Drachmannsvej
+Holmevej
+Holtevej
+Horsensgade
+Høegh-Guldbergsgade
+Immervad
+Ingerslevs Boulevard
+Ingerslevs Plads
+Istedgade
+Ivar Huitfeldtsgade
+J. Michaelsensgade
+Jerichausgade
+Jægergaardsgade
+Kaløgade
+Kannikegade
+Kaserne-Boulevard
+Kirkegaardsvej
+Klostergade
+Klosterport
+Knudrisgade
+Kommunehospitalet
+Kriegersvej
+Kroghsgade
+Kuhlausvej
+Kystvej
+Langelandsgade
+Lars Krusesgade
+Lauge Kochsvej
+Lille Torv
+Lindevej
+Lollandsgade
+Louisegade
+Lundbyesgade
+Lundingsgade
+Læssøesgade
+Marienlunds Allé
+Mark
+Marselis Tværvej
+Marselisborg Allé
+Marselisborg Hospital
+Marselisborg Mark
+Marselisborg Skov
+Marselisvej
+Marstrandsgade
+Max Müllersgade
+Mejlgade
+Mindegade
+Molsgade
+Montanagade
+Munkegade
+Museumsgade
+Mylius Erichsensvej
+Møensgade
+Møllegade
+Møllestien
+Mørksgade
+N.J. Fjordsgade
+N.W. Gades Vej
+Niels Ebbesens Vej
+Niels Juelsgade
+Norsgade
+Ny Munkegade
+Ny Tjørnegade
+Nyborggade
+Nygade
+Nyvej
+Nørre Allé
+Nørrebrogade
+Nørregade
+Nørrevang
+Odensegade
+Ole Rømersgade
+Orla Lehmanns Allé
+Otto Rudsgade
+Paludan Müllersvej
+Paradisgade
+Park Allé
+Peder Skramsgade
+Poul Martin Møllersvej
+Raadhusstræde
+Revet
+Ridderstræde
+Riis Skov
+Ringgade (Nord)
+Ringgade (Syd)
+Ringgade (Vest)
+Ringkøbingvej
+Roald Amundsensvej
+Rolighedsvej
+Rosenkrantzgade
+Rosensgade
+Rostrupsvej
+Rungstedvej
+Ryesgade
+Rytterikasernen
+Saltholmsgade
+Samsøgade
+Sandgravvej
+Schleppegrellsgade
+Sct Clemensstræde
+Sct. Clemens Torv
+Sct. Lukas Kirkeplads
+Sct. Olufsgade
+Sct. Pauls Kirkeplads
+Sct. Paulsgade
+Sejrøgade
+Sjællandsgade
+Skolebakken
+Skolegade
+Skolegyde
+Skovbrynet
+Skovfaldet
+Skovgaardsgade
+Skovvangs Torv
+Skovvangsvej
+Skovvej
+Smedegyde
+Sonnesgade
+Spanien
+Stadion Allé
+Stavangergade
+Steen Blichersgade
+Steinmannsgade
+Sten Billesgade
+Store Torv
+Strandvej
+Studsgade
+Søgade
+Sølystgade
+Sønder Allé
+Søndergade
+Søndervang
+Søren Frichsvej
+Taarbækvej
+Tangen
+Teglværksgade
+Thorvaldsensgade
+Thunøgade
+Thyrasgade
+Tietgens Plads
+Tjørnegade
+Toldbodgade
+Tordenskjoldsgade
+Trepkasgade
+Trøjborgvej
+Trøjborgvejs Fortsættelse
+Tværgade
+Valdemarsgade
+Vejlegade
+Vester Allé
+Vesterbro Torv
+Vesterbrogade
+Vestergade
+Vesterport
+Vestervang
+Viborgvej
+Volden
+Willemoesgade
+Wilstersgade
+de Mezasvej
+Ærøgade
+Østbanegaarden
+Østbanetorv
+Østboulevard
+Østergade
