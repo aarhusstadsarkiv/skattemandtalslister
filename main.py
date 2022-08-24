@@ -28,7 +28,12 @@ def clean_road_name(string: str) -> str:
     return clean_str
 
 def is_road(address_or_road: str) -> bool:
-    # TODO: Define this soo it returns wheter or not a string is a road our a full address
+    # If the given string contains numbers, we are in the clear to ssume it is a addresse 
+    has_numbers = re.search(r"\d" , address_or_road)
+    if has_numbers:
+        return False
+    else:
+        return True
     pass
 
 # removes everything but the digits from a string
@@ -57,9 +62,6 @@ def get_skatmand_road_names_by_year_and_id() -> dict:
                 year: str = re.search(r'\d\d\d\d', skatmand.get("date_from")).group()
                 road_name_list: list = road_name_str.split(",")
                 roads_in_skatmand: list = []
-                # rn it does not take care of one road being assigned to multible skattemandtalslister
-                # TODO: Make the skatmand dict values as a list instead of as a string. Check if the remaining
-                # logic still works and fix the inevitable mistakes
                 for road in road_name_list:
                     road = road.replace("Skattemandtalslister", "")
                     road = clean_road_name(road)
@@ -84,7 +86,11 @@ def get_skatmand_road_names_by_year_and_id() -> dict:
 # the values passed to the function can also be None
 # TODO see if this makes sense to make excplicit in mypy
 def make_list_of_addresses(
-    road_name: str, even_start: int, even_end: int, uneven_start: int, uneven_end: int
+    road_name: str, 
+    even_start: int, 
+    even_end: int, 
+    uneven_start: int, 
+    uneven_end: int
 ) -> list:
     result: list[str] = []
 
@@ -175,12 +181,14 @@ def get_road_info_by_year() -> dict:
             temp_dict_1[road_name] = temp_dict_2
             year_check = year
         road_numbers_by_year[str(year)] = temp_dict_1
+
     return road_numbers_by_year
 
 
-def get_location_entities() -> dict:
+def get_location_entities_by_road_name() -> dict:
     location_entities: dict = {}
     entities_file_path: Path = Path("2022-08-09_entity_backup.csv")
+    list_of_synonyms = None
     with open(entities_file_path, "r", encoding="utf-8", newline="") as entities_file:
         reader = csv.DictReader(entities_file)
         for line in reader:
@@ -191,10 +199,13 @@ def get_location_entities() -> dict:
                 data = line["data"]
                 data = data.replace('"', '\\"')
                 data = ast.literal_eval(line["data"])
-                road_name_str = line["display_label"]
-                # important that we clean both instances of road names the same way, to
-                # ensure the highest propability of a hit.
+                road_name_str: str = line["display_label"]
                 road_name_str = clean_road_name(road_name_str)
+                if line.get('alt_names'):
+                    list_of_synonyms: list[str] = line["alt_names"]
+                    list_of_synonyms = list(map(lambda x : clean_road_name(x), list_of_synonyms))
+                else:
+                    List_of_synonyms = None
                 number_list: list = re.findall(r"(\d+\w?)", road_name_str)
                 try:
                     number: str = number_list[0]
@@ -204,13 +215,21 @@ def get_location_entities() -> dict:
                     "data": data,
                     "id": id,
                     "number": number,
+                    "synonyms": List_of_synonyms
                 }
+                if list_of_synonyms:
+                    for synonym in list_of_synonyms:
+                        location_entities[synonym] = {
+                            "data": data,
+                            "id": id,
+                            "number": number
+                        }
     entities_file.close()
     return location_entities
 
 
 def calculate_simular_roadnames_by_year() -> None:
-    location_entities: dict = get_location_entities()
+    location_entities: dict = get_location_entities_by_road_name()
     road_names_by_year: dict = get_skatmand_road_names_by_year_and_id()
     dict_of_misses: dict[str, list] = {}
     dict_of_hits: dict[str, list] = {}
@@ -256,9 +275,10 @@ def calculate_simular_roadnames_by_year() -> None:
 
 
 def main():
+    # also contains the synonyms for the 
+    location_entities_by_road_and_addresses: dict[str, dict] = get_location_entities_by_road_name()
     skatmand_roads_by_year_and_id: dict[str, list] = get_skatmand_road_names_by_year_and_id()
     road_info_by_year: dict[str, dict] = get_road_info_by_year()
-    location_entities_by_address: dict[str, dict] = get_location_entities()
     years: list[str] = skatmand_roads_by_year_and_id.keys()
     result: dict = {}
 
@@ -282,20 +302,20 @@ def main():
                         road_info_dict = road_info[road]
                     except (KeyError):
                         continue
-                    list_of_addresses: list = road_info_dict["list_of_addresses"]
-                    list_of_addresses.append(road)
+                    list_of_addresses_and_road: list = road_info_dict["list_of_addresses"]
+                    list_of_addresses_and_road.append(road)
                     temp_list: list = []
                     # if the address isnt represented in the location entity set, add it to
                     # the list of missed addresses and continue.
-                    for address in list_of_addresses:
+                    for address_or_road in list_of_addresses_and_road:
                         try:
-                            location_entity_dict = location_entities_by_address[address]
+                            location_entity_dict = location_entities_by_road_and_addresses[address_or_road]
                             temp_list.append(location_entity_dict["id"])
-                            total_set_of_addresses.add(address)
+                            total_set_of_addresses.add(address_or_road)
                             i += 1
                         except (KeyError):
-                            set_of_missed_addresses.add(address)
-                            total_set_of_addresses.add(address)
+                            set_of_missed_addresses.add(address_or_road)
+                            total_set_of_addresses.add(address_or_road)
                             continue
                     try:
                         result_list: list = result[skatmand_id]
@@ -315,7 +335,11 @@ def main():
     missed_list.close()
 
     missed_roads = open('missed_road.txt', 'w', encoding='utf-16')
-    for address in sorted_misses
+    for address in sorted_misses:
+        if is_road(address):
+            missed_roads.write(f"{address}\n")
+        else: continue
+    missed_roads.close()
 
     print(
         "We missed this many addresses:", len(set_of_missed_addresses), "out of", len(total_set_of_addresses)
