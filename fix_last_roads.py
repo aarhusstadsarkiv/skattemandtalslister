@@ -1,5 +1,7 @@
-# This script fixes the remaining roads from the skattemandtalslister provided by Kio
-# Specifications: Connect the given skatmanID with road IDs by looking into the entity list
+# This script fixes the remaining roads from the
+# skattemandtalslister provided by Kio
+# Specifications: Connect the given skatmanID with
+# road IDs by looking into the entity list
 import json
 from pathlib import Path
 import openpyxl
@@ -12,10 +14,14 @@ location_entities_by_road_and_addresses: dict[
 ] = get_location_entities_by_road_name()
 
 
-def get_list_of_ids_to_skatmand(start: int, end: int, road_name: str) -> list[str]:
+def get_list_of_ids_to_skatmand(
+    start: int, end: int, road_name: str
+) -> list[str]:
     """
-    Iterates over all the numbers from start until end, and appends them to road_name to make an address
-    If the address has an ID in the entity-set, this is found and added to the result
+    Iterates over all the numbers from start until end,
+    and appends them to road_name to make an address
+    If the address has an ID in the entity-set, this is found
+    and added to the result
     Returns all addresses_ID's in the range.
     """
     result: list[str] = []
@@ -33,7 +39,7 @@ def get_list_of_ids_to_skatmand(start: int, end: int, road_name: str) -> list[st
     return result
 
 
-def main():
+def main() -> None:
     path_to_file: Path = Path(r"Kios_gadenavne\duplicate_roads_by_year.xlsx")
     # We have to make the string 'raw' (r) in ordrer to avoid W605 warnings
     wb_temp: openpyxl.Workbook = openpyxl.load_workbook(path_to_file)
@@ -66,20 +72,29 @@ def main():
         second_odd_start: int = row[9]
         second_odd_end: int = row[10]
 
-        # The method for finding the address id's for a road is here made as a helper method
+        # The method for finding the address id's for a road
+        # is here made as a helper method
         skatmand_id_to_list_of_address_id[skatmand_id_1].append(
-            get_list_of_ids_to_skatmand(first_even_start, first_even_end, road_name)
+            get_list_of_ids_to_skatmand(
+                first_even_start, first_even_end, road_name
+            )
         )
         skatmand_id_to_list_of_address_id[skatmand_id_1].append(
-            get_list_of_ids_to_skatmand(first_odd_start, first_odd_end, road_name)
+            get_list_of_ids_to_skatmand(
+                first_odd_start, first_odd_end, road_name
+            )
         )
 
         # And for the other skatmand
         skatmand_id_to_list_of_address_id[skatmand_id_2].append(
-            get_list_of_ids_to_skatmand(second_even_start, second_even_end, road_name)
+            get_list_of_ids_to_skatmand(
+                second_even_start, second_even_end, road_name
+            )
         )
         skatmand_id_to_list_of_address_id[skatmand_id_2].append(
-            get_list_of_ids_to_skatmand(second_odd_start, second_odd_end, road_name)
+            get_list_of_ids_to_skatmand(
+                second_odd_start, second_odd_end, road_name
+            )
         )
 
     json_file: str = json.dumps(skatmand_id_to_list_of_address_id)
