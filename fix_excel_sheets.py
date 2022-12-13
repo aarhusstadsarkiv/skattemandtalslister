@@ -1,6 +1,5 @@
 # Small script for fixing mistakes in the excel sheets based on the findings
 
-from fileinput import filename
 import openpyxl
 
 from pathlib import Path

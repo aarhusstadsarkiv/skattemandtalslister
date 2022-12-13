@@ -3,17 +3,17 @@
 # skattemandtalslister. It then makes a dump of these to update the website
 
 
-from multiprocessing.reduction import duplicate
-from pathlib import Path
-from typing import Union
-import warnings
-
-
 import openpyxl
 import csv
 import ast
 import re
 import json
+
+from fuzzywuzzy import fuzz
+from pathlib import Path
+from typing import Union
+import warnings
+
 
 # used to clean roadnames to ensure the formatiing is the same across files
 # does not correct spelling or anything like that
@@ -30,9 +30,11 @@ def clean_road_name(string: str) -> str:
 
 
 def clean_road_name2(string: str) -> str:
-    # some roads havde their construction year in parentheses like so:
-    # test vej 43D (1967-). This is interesting info, and might be usefull in
-    # later versions, but rn we just remove it.
+    """
+    some roads havde their construction year in parentheses like so:
+    test vej 43D (1967-). This is interesting info, and might be usefull in
+    later versions, but rn we just remove it.
+    """
     if "(" in string:
         string = string[0 : string.index("(")]
     string = string.replace(" ", "")
@@ -41,8 +43,10 @@ def clean_road_name2(string: str) -> str:
 
 
 def is_road(address_or_road: str) -> bool:
-    # If the given string contains numbers, we are in the clear to assume it is a addresses
-    # The method disreagards the year number we add at the end of some addresses or roads  
+    """
+    If the given string contains numbers, we are in the clear to assume it is a addresses
+    The method disregards the year number we add at the end of some addresses or roads
+    """
     has_numbers = re.search(r"[a-zA-Zé]\d", address_or_road)
     if has_numbers:
         return False
@@ -84,7 +88,10 @@ def get_skatmand_road_names_by_year_and_id() -> dict:
                     "roads": roads_in_skatmand,
                     "year": year,
                 }
-                for skatmand_id, skatmand_info in skatmand_id_to_roads_and_year.items():
+                for (
+                    skatmand_id,
+                    skatmand_info,
+                ) in skatmand_id_to_roads_and_year.items():
                     year = skatmand_info["year"]
                     roads = skatmand_info["roads"]
                 try:
@@ -92,7 +99,7 @@ def get_skatmand_road_names_by_year_and_id() -> dict:
                     temp_dict: dict = {skatmand_id: roads}
                     list_of_id_to_roads.append(temp_dict)
                     road_names_by_year[year]: list = list_of_id_to_roads
-                except (KeyError):
+                except KeyError:
                     # only gets an error if the key is not assigned yet, so we assign it
                     temp_dict: dict = {skatmand_id: roads}
                     road_names_by_year[year]: list = [
@@ -105,7 +112,11 @@ def get_skatmand_road_names_by_year_and_id() -> dict:
 # the values passed to the function can also be None
 # TODO see if this makes sense to make excplicit in mypy
 def make_list_of_addresses(
-    road_name: str, even_start: int, even_end: int, uneven_start: int, uneven_end: int
+    road_name: str,
+    even_start: int,
+    even_end: int,
+    uneven_start: int,
+    uneven_end: int,
 ) -> list:
     result: list[str] = []
 
@@ -166,7 +177,7 @@ def do_we_have_duplicates(skatmand_roads_by_year: dict) -> None:
                             former_id = road_to_id_dict[road]
                             former_id.append(id)
                             road_to_id_dict[road] = former_id
-                        except (KeyError):
+                        except KeyError:
                             road_to_id_dict[road] = id
                 if len(duplicated_roads_in_skatmand) > 0:
                     for road in duplicated_roads_in_skatmand:
@@ -196,7 +207,8 @@ def get_road_info_by_year() -> dict:
             if year_check is not None and year is not None:
                 if year != year_check:
                     warnings.warn(
-                        "Warning: Data not as excpected. See road_info_by_year function for explaination"
+                        "Warning: Data not as excpected. See road_info_by_year function"
+                        " for explaination"
                     )
                     warnings.warn(
                         "Warning: discrepancy found in "
@@ -242,7 +254,9 @@ def get_road_info_by_year() -> dict:
 
 def get_location_entities_by_road_name() -> dict[dict]:
     """
-    Gets the location entities from the entity backup and returns a dictionary, containing another deictionary with the relevant data on the addres such as entity_id, synonyms and a general data pack.
+    Gets the location entities from the entity backup and returns a
+    dictionary, containing another deictionary with the relevant data on the address
+    such as entity_id, synonyms and a general data pack.
     The road names have been cleaned
     """
     location_entities: dict = {}
@@ -313,7 +327,7 @@ def get_location_entities_by_road_name() -> dict[dict]:
                                 }
                         else:
                             continue
-                    except (AttributeError):
+                    except AttributeError:
                         missed_roads.append(address)
     entities_file.close()
     found_entities = open("entities_with_synonyms.txt", "w", encoding="utf-16")
@@ -331,7 +345,6 @@ def calculate_simular_roadnames_by_year() -> None:
 
     years: list[str] = road_names_by_year.keys()
     # list to keep track of roads being in a year more than once
-    roads_in_a_year: list = []
     misses = 0
     hits = 0
     for year in years:
@@ -369,7 +382,14 @@ def calculate_simular_roadnames_by_year() -> None:
                     j = j + 1
                 elif fuzz.ratio(hit, mis) >= 85:
                     i = i + 1
-        print(year, " had the following stats: ", "near hits: ", i, "true hits: ", j)
+        print(
+            year,
+            " had the following stats: ",
+            "near hits: ",
+            i,
+            "true hits: ",
+            j,
+        )
 
 
 def main():
@@ -393,7 +413,7 @@ def main():
         # if the year isnt represented in the road info dict, continue to next year
         try:
             road_info: dict = road_info_by_year[year]
-        except (KeyError):
+        except KeyError:
             continue
         # we use the dobbelt nested loop to loop over a list of dicitonaries
         # not pretty, but works
@@ -403,7 +423,7 @@ def main():
                 for road in skatmand_roads:
                     try:
                         road_info_dict = road_info[road]
-                    except (KeyError):
+                    except KeyError:
                         continue
                     list_of_addresses_and_road: list = road_info_dict[
                         "list_of_addresses"
@@ -420,7 +440,7 @@ def main():
                             temp_list.append(location_entity_dict["id"])
                             total_set_of_addresses.add(address_or_road)
                             i += 1
-                        except (KeyError):
+                        except KeyError:
                             set_of_missed_addresses.add(address_or_road + " -" + year)
                             total_set_of_addresses.add(address_or_road)
                             continue
@@ -428,7 +448,7 @@ def main():
                         result_list: list = result[skatmand_id]
                         temp_list.extend(result_list)
                         result[skatmand_id] = temp_list
-                    except (KeyError):
+                    except KeyError:
                         result[skatmand_id] = temp_list
     json_file: str = json.dumps(result)
     output = open("output.json", "w")
